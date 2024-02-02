@@ -1,2 +1,8 @@
-# chingu-trivia
-Chingu Solo Project - Tier 3 - Chingu Trivia
+# Chingu Trivia
+
+## Features
+
+
+## Built With
+
+## Getting Started
