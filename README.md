@@ -3,6 +3,6 @@
 ## Features
 
 
-## Technologies
+## Built With
 
-## Usage
+## Getting Started
