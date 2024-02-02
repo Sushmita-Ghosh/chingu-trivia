@@ -1,4 +1,3 @@
 # chingu-trivia
----
 
 # Overview
