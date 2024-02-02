@@ -1,4 +1,4 @@
 # chingu-trivia
 ---
-===
+
 # Overview
