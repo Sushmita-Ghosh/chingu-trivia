@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./QuizMain.css";
 import { AiFillCaretDown } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function QuizMain() {
   const [data, setData] = useState([]);
@@ -58,9 +59,16 @@ function QuizMain() {
         )}
       </div>
 
-      <button className="btn" onClick={() => console.log(data[category])}>
-        Start Quiz
-      </button>
+      {console.log(data[category])}
+
+      <Link
+        to="/quiz"
+        state={{
+          questions: data[category],
+        }}
+      >
+        <button className="btn">Start Quiz</button>
+      </Link>
     </div>
   );
 }
