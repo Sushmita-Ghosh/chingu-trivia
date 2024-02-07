@@ -1,10 +1,12 @@
 import "./App.css";
-import QuizMain from "./components/QuizMain/QuizMain";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <QuizMain />
+    <div className="app">
+      <Header />
+      <Outlet />
     </div>
   );
 }
