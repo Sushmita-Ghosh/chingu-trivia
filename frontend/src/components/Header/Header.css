@@ -12,3 +12,13 @@ h1 {
   color: #f9f9f9;
   margin: 20px;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    justify-content: center;
+    padding: 0px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
