@@ -1,24 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500&display=swap");
+
 body {
   font-family: "RobotoCondensed", sans-serif;
   background-color: #f9f9f9;
   color: #444444;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: end;
+  box-sizing: border-box;
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
-  padding: 20px;
-  max-width: 600px;
+  height: 100vh;
+  width: 100%;
 }

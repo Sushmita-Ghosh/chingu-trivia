@@ -12,20 +12,22 @@ const QuizQuestionContainer = () => {
   console.log(Object.values(choices));
   return (
     <div className="quiz-question-container">
-      <div className="question-title">
-        <span className="active-question-number">
-          Question {currentQuestion}
-        </span>
-        <span className="total-question-number">/{questions.length}</span>
-      </div>
-      <h2 className="question">{question}</h2>
+      <div className="question-container">
+        <div className="question-title">
+          <span className="active-question-number">
+            Question {currentQuestion}
+          </span>
+          <span className="total-question-number">/{questions.length}</span>
+        </div>
+        <h2 className="question">{question}</h2>
 
-      <div className="choices-cointainer">
-        {Object.values(choices).map((choice) => (
-          <div className="choice" key={choice}>
-            {choice}
-          </div>
-        ))}
+        <div className="choices-cointainer">
+          {Object.values(choices).map((choice) => (
+            <div className="choice" key={choice}>
+              {choice}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

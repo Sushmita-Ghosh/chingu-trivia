@@ -26,7 +26,7 @@ function QuizMain() {
   }, []);
 
   return (
-    <div className="app">
+    <div className="quiz-container">
       <h1 className="title">Tech Trivia</h1>
       <h3 className="description">
         Are you ready to test your knowledge? Do you know a little about a lot?

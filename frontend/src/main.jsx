@@ -4,19 +4,26 @@ import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import QuizQuestionContainer from "./components/QuizQuestionContainer/QuizQuestionContainer.jsx";
+import QuizMain from "./components/QuizMain/QuizMain.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/quiz",
-    element: <QuizQuestionContainer />,
-  },
-  {
-    path: "*",
-    element: <div>Error</div>,
+    children: [
+      {
+        path: "/",
+        element: <QuizMain />,
+      },
+      {
+        path: "/quiz",
+        element: <QuizQuestionContainer />,
+      },
+      {
+        path: "*",
+        element: <div>Error</div>,
+      },
+    ],
   },
 ]);
 
