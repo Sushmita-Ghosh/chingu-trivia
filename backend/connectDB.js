@@ -3,9 +3,7 @@ const mongoose = require("mongoose");
 var colors = require("colors");
 
 const connectDB = async () => {
-  const conn = await mongoose.connect(
-    "mongodb+srv://admin:admin@cluster0.cnjhvkt.mongodb.net/users"
-  );
+  const conn = await mongoose.connect(process.env.MONGO_URI || "");
   console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold);
 };
 
