@@ -1,8 +1,8 @@
-# Chingu Trivia
+# 🌻 Chingu Trivia 
 
-## Features
+## 🚀 Features
 
 
-## Built With
+## ❤ Built With
 
-## Getting Started
+## ✨ Getting Started
