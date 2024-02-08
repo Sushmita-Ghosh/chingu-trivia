@@ -9,6 +9,7 @@
 
 
 ## 📝 Folder Structure:
+```lua
 chingu-trivia/
 |-- frontend/
 |   |-- src/
@@ -29,3 +30,4 @@ chingu-trivia/
 |-- .gitignore
 |-- README.md
 |-- LICENSE
+```
