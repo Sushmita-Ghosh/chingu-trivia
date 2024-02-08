@@ -8,12 +8,13 @@
   height: 80%;
   margin: auto;
 }
-.question-container {
+.question-container,
+.result {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  /* height: 400px; */
   width: 90%;
   border-radius: 10px;
   padding: 20px;
@@ -27,7 +28,8 @@
   letter-spacing: 2px;
 }
 
-.question {
+.question,
+.result-title {
   font-size: 1.7rem;
   text-align: center;
   line-height: 1.7rem;
@@ -60,29 +62,41 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 500px) {
-  .quiz-question-container {
-    width: 200px;
-    padding: 30px auto;
-    margin: 10px;
-  }
+.active {
+  background: var(--primary);
+  color: var(--light);
+}
 
-  .question {
-    font-size: 1.1rem;
-    width: 100%;
-    /* border: 2px solid gray; */
-  }
+.next-question-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 
-  .choices-cointainer {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 10px;
+.next-question-btn {
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--disabled);
+    color: #fff;
   }
-  .choice {
-    font-size: 0.8rem;
-    width: 30%;
-    padding: 15px;
-  }
+}
+
+.result-text {
+  font-size: 1.3rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+p span {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 500px) {
@@ -90,9 +104,34 @@
     width: 300px;
     padding: 20px;
     margin: auto;
+    height: 100%;
   }
-  .question-container {
-    height: 300px;
+  .question-container,
+  .result {
+    height: fit-content;
     width: 100%;
+  }
+
+  .question {
+    font-size: 1.3rem;
+  }
+
+  .choices-cointainer {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .choice {
+    font-size: 1rem;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .next-question-btn-container {
+    justify-content: center;
+  }
+
+  .btn-container {
   }
 }
