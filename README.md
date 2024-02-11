@@ -1,8 +1,33 @@
-# Chingu Trivia
+# 🌻 Chingu Trivia 
 
-## Features
+## 🚀 Features
 
 
-## Built With
+## ❤ Built With
 
-## Getting Started
+## ✨ Getting Started
+
+
+## 📝 Folder Structure:
+```lua
+chingu-trivia/
+|-- frontend/
+|   |-- src/
+|       |-- components/
+|       |-- pages/
+|       |-- App.js
+|       |-- index.js
+|   |-- package.json
+|
+|-- backend/
+|   |-- controllers/
+|   |-- models/
+|   |-- routes/
+|   |-- config/
+|   |-- server.js
+|   |-- package.json
+|
+|-- .gitignore
+|-- README.md
+|-- LICENSE
+```
