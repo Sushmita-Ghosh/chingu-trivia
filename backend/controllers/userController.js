@@ -13,7 +13,14 @@ async function handleUserSignup(req, res) {
 
   await User.create({ username, email, password });
 
-  res.json({ success: true, message: "User created successfully" });
+  res.json({
+    success: true,
+    message: "User created successfully",
+    data: {
+      email,
+      username,
+    },
+  });
 }
 
 async function handleUserLogin(req, res) {
@@ -33,7 +40,14 @@ async function handleUserLogin(req, res) {
       .json({ success: false, message: "Invalid email or password" });
   }
 
-  res.json({ success: true, message: "User logged in successfully" });
+  res.json({
+    success: true,
+    message: "User logged in successfully",
+    data: {
+      email,
+      username: user.username,
+    },
+  });
 }
 
 module.exports = {
