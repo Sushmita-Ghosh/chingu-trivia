@@ -1,6 +1,7 @@
 // 3. functions related to user
 
 const User = require("../models/user");
+const { setUser, getUser } = require("../service/auth");
 
 async function handleUserSignup(req, res) {
   const { username, email, password } = req.body;
@@ -11,15 +12,15 @@ async function handleUserSignup(req, res) {
       .json({ success: false, message: "All fields are required" });
   }
 
-  await User.create({ username, email, password });
+  const user = await User.create({ username, email, password });
+
+  const userId = user._id;
+  const token = setUser(userId);
 
   res.json({
     success: true,
     message: "User created successfully",
-    data: {
-      email,
-      username,
-    },
+    token: token,
   });
 }
 
@@ -40,13 +41,23 @@ async function handleUserLogin(req, res) {
       .json({ success: false, message: "Invalid email or password" });
   }
 
-  res.json({
-    success: true,
-    message: "User logged in successfully",
-    data: {
-      email,
-      username: user.username,
-    },
+  // create a token
+
+  if (user) {
+    const userId = user._id;
+    const token = setUser(userId);
+
+    res.json({
+      success: true,
+      message: "User logged in successfully",
+      token: token,
+    });
+
+    return;
+  }
+
+  res.status(411).json({
+    message: "Error while logging in",
   });
 }
 
