@@ -4,13 +4,12 @@
   align-items: center;
   justify-content: center;
   width: 500px;
-  height: 80%;
+  height: 80vh;
   margin: auto;
   padding: 20px;
 }
 
 .title {
-  font-family: "RobotoCondensed", sans-serif;
   font-size: 80px;
   font-weight: 700;
   text-align: center;
@@ -20,7 +19,6 @@
 }
 
 .description {
-  font-family: "RobotoCondensed", sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
