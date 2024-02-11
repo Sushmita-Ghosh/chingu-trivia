@@ -1,0 +1,153 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  /* height: 600px; */
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.score-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  margin: 0px 5px;
+}
+
+.result-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  color: var(--dark);
+  margin: 10px;
+}
+
+.link-btn {
+  padding: 10px;
+  width: 100%;
+}
+
+.score-btn {
+  padding: 10px;
+  width: 100%;
+}
+
+.table-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.score-card-title {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: var(--light);
+  text-align: center;
+  font-weight: 300;
+}
+
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.score-card:hover {
+  color: var(--bg);
+  background-color: var(--light);
+}
+
+.score-card span {
+  font-weight: bold;
+  padding: 10px;
+  border-top: 1px solid #5e4dcd;
+  border-bottom: 1px solid #5e4dcd;
+  width: 150px;
+  text-align: center;
+}
+
+.result-text {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.result-text span {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .btn-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .score-btn-wrapper {
+    width: 100%;
+    margin: 0px 0px;
+  }
+
+  .score-btn {
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 1rem;
+  }
+
+  .link-btn {
+    width: 100%;
+  }
+
+  .table-score {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .result-text {
+    font-size: 1.1rem;
+    padding: 0px;
+    margin: 5px 0px;
+  }
+
+  .result-text span {
+    font-size: 1.3rem;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .result-title {
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+
+  .score-card-title {
+    font-size: 1.3rem;
+  }
+
+  .score-card span {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+  }
+}
