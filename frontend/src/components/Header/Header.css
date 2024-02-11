@@ -4,13 +4,16 @@
   align-items: center;
   height: 10%;
   background-color: var(--primary);
-  width: 100%;
   padding: 20px;
 }
 
 h1 {
   color: #f9f9f9;
   margin: 20px;
+}
+
+.link {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 500px) {

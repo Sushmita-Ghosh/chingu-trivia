@@ -5,11 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 80vh;
   margin: auto;
 }
-.question-container,
-.result {
+.question-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,8 +27,7 @@
   letter-spacing: 2px;
 }
 
-.question,
-.result-title {
+.question {
   font-size: 1.7rem;
   text-align: center;
   line-height: 1.7rem;
@@ -81,24 +79,6 @@
   }
 }
 
-.result-text {
-  font-size: 1.3rem;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin-bottom: 40px;
-}
-
-p span {
-  color: var(--primary);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 @media screen and (max-width: 500px) {
   .quiz-question-container {
     width: 300px;
@@ -106,8 +86,7 @@ p span {
     margin: auto;
     height: 100%;
   }
-  .question-container,
-  .result {
+  .question-container {
     height: fit-content;
     width: 100%;
   }
@@ -130,8 +109,5 @@ p span {
 
   .next-question-btn-container {
     justify-content: center;
-  }
-
-  .btn-container {
   }
 }

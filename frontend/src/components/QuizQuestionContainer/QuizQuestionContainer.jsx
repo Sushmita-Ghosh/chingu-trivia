@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./QuizQuestionContainer.css";
 import { resultInitialState } from "../../contants";
-/* eslint-disable react/prop-types */
+import Result from "../Result/Result";
+
 const QuizQuestionContainer = () => {
   const { state } = useLocation();
 
@@ -14,11 +15,6 @@ const QuizQuestionContainer = () => {
   const [result, setResult] = useState(resultInitialState); // keep track of score
   const [showResult, setShowResult] = useState(false);
   const { question, answer, choices } = questions[currentQuestion];
-
-  // console.log(questions[currentQuestion]);
-  // console.log(Object.values(choices));
-
-  // console.log(questions);
 
   const handleChoiceClick = (choice, index) => {
     setAnswerIdx(index);
@@ -88,39 +84,16 @@ const QuizQuestionContainer = () => {
               onClick={handleNextClick}
               disabled={answerIdx === null}
             >
-              {currentQuestion === questions.length - 1
-                ? "Finish"
-                : "Next Question"}
+              {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
             </button>
           </div>
         </div>
       ) : (
-        <div className="result">
-          <h3 className="result-title">Result</h3>
-          <p className="result-text">
-            Total Questions: <span>{questions.length}</span>
-          </p>
-          <p className="result-text">
-            Correct Answers: <span>{result.correctAnswers}</span>
-          </p>
-          <p className="result-text">
-            Wrong Answers: <span>{result.wrongAnswers}</span>
-          </p>
-          <p className="result-text">
-            Score: <span>{result.score}</span>
-          </p>
-
-          <div className="btn-container">
-            <Link to="/">
-              <button className="main-page-btn">Main Page</button>
-            </Link>
-
-            <button className="try-again-btn" onClick={restartQuiz}>
-              {" "}
-              Try Again
-            </button>
-          </div>
-        </div>
+        <Result
+          questions={questions}
+          result={result}
+          restartQuiz={restartQuiz}
+        />
       )}
     </div>
   );

@@ -9,8 +9,6 @@ function QuizMain() {
   const [categories, setCategories] = useState([]);
   const [isActive, setIsActive] = useState(false);
 
-  // const [isLoading, setIsLoading] = useState(false);
-
   const fetchApi = async () => {
     const response = await fetch(
       "https://johnmeade-webdev.github.io/chingu_quiz_api/trial.json"
@@ -58,8 +56,6 @@ function QuizMain() {
           </div>
         )}
       </div>
-
-      {console.log(data[category])}
 
       <Link
         to="/quiz"

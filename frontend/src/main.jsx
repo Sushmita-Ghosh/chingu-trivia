@@ -5,6 +5,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import QuizQuestionContainer from "./components/QuizQuestionContainer/QuizQuestionContainer.jsx";
 import QuizMain from "./components/QuizMain/QuizMain.jsx";
+import Authentication from "./components/Authentication/Authentication.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/quiz",
         element: <QuizQuestionContainer />,
+      },
+      {
+        path: "/login",
+        element: <Authentication />,
       },
       {
         path: "*",
