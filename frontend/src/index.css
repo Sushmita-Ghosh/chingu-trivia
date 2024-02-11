@@ -8,3 +8,7 @@
   --bg: #212529;
   --disabled: #ccc;
 }
+
+.Toastify__toast-body {
+  font-family: "Poppins", sans-serif;
+}
