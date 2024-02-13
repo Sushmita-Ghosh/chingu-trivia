@@ -52,7 +52,7 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
    cd backend   --> do this in terminal 2
    npm run start
    ```
-## 💡 Future ENhancements:
+## 💡 Future Enhancements:
 * Need to add the logout functionality. (Currently the token expires in 24hrs but we have removed it from localhost manually).
 * Currently the flow is dependent on signup for the username field, so the user would have to sign up for the username to be accessed. Need to improve this for all signed-up users who are directly logging in. 
 * Want to include tests with React Testing Library and Jest.
