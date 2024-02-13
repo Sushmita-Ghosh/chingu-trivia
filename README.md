@@ -19,8 +19,43 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
 
 
 ## ✨ Getting Started:
+1. Clone the Repository:
+   ```bash
+   git clone https://github.com/yourusername/trivia-fun.git
+   ``
+2. Install Dependencies for both frontend & backend:
+  ```bash
+cd frontend
+npm install
+
+cd backend
+npm install
+```
+3. Set Variables in the config.js in backend folder:
+   ```bash
+   MONGO_URI = Create a cluster in mongodb and we need to provide the url here
+   SECRET_KEY= Put any string here
+
+   After updation it should look something like this:
+   MONGO_URI = "mongodb+srv://<username>:<password>@cluster0.cnjhdht.mongodb.net/chinguusers";
+    SECRET_KEY = "mySecret";
+   ```
+4. Launch frontend & backend in two different terminal:
+   ```bash
+   cd frontend --> do this in terminal 1
+   npm run dev
+
+   cd backend   --> do this in terminal 2
+   npm run start
+   ```
+   
 
 
+
+## 🌻 Deployment:
+* Used [Render](https://dashboard.render.com/) for web service/api deployment.
+* Used [Netlify](https://app.netlify.com/) for the frontend development
+* The project is available [here✨](https://chingu-tect-trivia.netlify.app/).
 
 ## 📝 Folder Structure:
 ```lua
@@ -29,6 +64,8 @@ chingu-trivia/
 |   |-- src/
 |       |-- components/
 |       |-- assets/
+|       |-- context/
+|       |-- constants/
 |       |-- App.jsx
 |       |-- main.jsx
 |   |-- package.json
@@ -38,7 +75,10 @@ chingu-trivia/
 |   |-- models/
 |   |-- routes/
 |   |-- config/
-|   |-- server.js
+|   |-- middlewares/
+|   |-- service/
+|   |-- connectDB.js
+|   |-- index.js
 |   |-- package.json
 |
 |-- .gitignore
