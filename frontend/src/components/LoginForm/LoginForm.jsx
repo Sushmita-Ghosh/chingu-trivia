@@ -4,21 +4,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { BACKEND_URL } from "../../constants/config";
+import { useContext } from "react";
+import AuthenticationContext from "../../context/authentication";
 
-const LoginForm = ({
-  setLogin,
-  setLoginTab,
-  email,
-  setEmail,
-  password,
-  setPassword,
-  username,
-}) => {
+const LoginForm = ({ setLoginTab, email, setEmail, password, setPassword }) => {
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    console.log(email, password);
+  const { setLogin } = useContext(AuthenticationContext);
 
+  const handleLogin = async () => {
     try {
       const { data } = await axios.post(
         `${BACKEND_URL}/user/login`,
@@ -33,30 +27,33 @@ const LoginForm = ({
         }
       );
 
+      localStorage.setItem("token", data.token);
+
+      // getting the user from local storage
+      const user = localStorage.getItem("user");
+
+      // saving the user in local storage
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          username: JSON.parse(user).username,
+          email: email,
+        })
+      );
+      setLogin(true);
+
       toast("🌻 Logged In Successfully!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
+        closeButton: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
       });
-      setLogin(true);
 
-      localStorage.setItem("token", data.token);
-
-      //saving the user in local storage
-      localStorage.setItem(
-        "user",
-        JSON.stringify({
-          data: {
-            username: username,
-            email: email,
-          },
-        })
-      );
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -65,6 +62,13 @@ const LoginForm = ({
 
   return (
     <div className="login-form">
+      <ToastContainer
+        style={{
+          fontSize: "1rem",
+          fontWeight: "bold",
+          width: "500px",
+        }}
+      />
       <h2>Login</h2>
       <div className="input-div">
         <input
@@ -97,26 +101,16 @@ const LoginForm = ({
           Sign Up
         </span>
       </p>
-
-      <ToastContainer
-        style={{
-          fontSize: "1rem",
-          fontWeight: "bold",
-          width: "500px",
-        }}
-      />
     </div>
   );
 };
 
 LoginForm.propTypes = {
-  setLogin: PropTypes.func.isRequired,
   setLoginTab: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   setEmail: PropTypes.func.isRequired,
   password: PropTypes.string.isRequired,
   setPassword: PropTypes.func.isRequired,
-  username: PropTypes.string.isRequired,
 };
 
 export default LoginForm;
