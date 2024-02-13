@@ -22,15 +22,15 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
 1. Clone the Repository:
    ```bash
    git clone https://github.com/yourusername/trivia-fun.git
-   ``
+   ```
 2. Install Dependencies for both frontend & backend:
   ```bash
-cd frontend
-npm install
-
-cd backend
-npm install
-```
+   cd frontend
+   npm install
+   
+   cd backend
+   npm install
+   ```
 3. Set Variables in the config.js in backend folder:
    ```bash
    MONGO_URI = Create a cluster in mongodb and we need to provide the url here
