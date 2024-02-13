@@ -1,10 +1,7 @@
-import React from "react";
-import AuthContext from "../../context/authentication";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { login } = React.useContext(AuthContext);
   const user = localStorage.getItem("user");
 
   return (

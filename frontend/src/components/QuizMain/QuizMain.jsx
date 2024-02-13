@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./QuizMain.css";
 import { AiFillCaretDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
+import Animation from "../../assets/animation1.json";
 
 function QuizMain() {
   const [data, setData] = useState([]);
@@ -25,6 +27,16 @@ function QuizMain() {
 
   return (
     <div className="quiz-container">
+      <div id="animation">
+        <Player
+          autoplay
+          loop
+          src={Animation}
+          style={{
+            width: "100%",
+          }}
+        ></Player>
+      </div>
       <h1 className="title">Tech Trivia</h1>
       <h3 className="description">
         Are you ready to test your knowledge? Do you know a little about a lot?
