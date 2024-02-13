@@ -1,6 +1,8 @@
 # 🌻 Chingu Trivia 
 Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoDB, Express.js, React, Node.js) stack! This app allows users to engage in trivia quizzes across three categories: HTML, CSS, and JavaScript. The app includes user authentication using JSON Web Tokens (JWT) for secure login and score-saving and fetching capabilities.
 
+🎯 **Note:** You don't need to signup/login to take the quiz. However to fetch and save scores, signing up is necessary.
+
 ##  📷 Screenshots :
 
 ## 🚀 Features
@@ -50,7 +52,11 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
    cd backend   --> do this in terminal 2
    npm run start
    ```
-
+## 💡 Future ENhancements:
+* Need to add the logout functionality. (Currently the token expires in 24hrs but we have removed it from localhost manually).
+* Currently the flow is dependent on signup for the username field, so the user would have to sign up for the username to be accessed. Need to improve this for all signed-up users who are directly logging in. 
+* Want to include tests with React Testing Library and Jest.
+* Further refactoring of code.
 
 ## 🌻 Deployment:
 * Used [Render](https://dashboard.render.com/) for web service/api deployment.
