@@ -28,9 +28,9 @@ chingu-trivia/
 |-- frontend/
 |   |-- src/
 |       |-- components/
-|       |-- pages/
-|       |-- App.js
-|       |-- index.js
+|       |-- assets/
+|       |-- App.jsx
+|       |-- main.jsx
 |   |-- package.json
 |
 |-- backend/
