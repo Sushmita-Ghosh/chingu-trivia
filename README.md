@@ -3,7 +3,7 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
 
 ## 🚀 Features
 *   **Authentication with JWT:** Securely authenticate users to save and fetch scores.
-*   **Score Saving and Fetching:** Track your progress and compete with others.   
+*   **Score Saving and Fetching:** Track your progress and get your latest score.   
 *   **Three Quiz Categories:** Choose from HTML, CSS, and JavaScript quizzes.    
 *   **Lottie Animations:** Elevate the user experience with engaging animations.  
 *   **Responsive Design:** Enjoy seamless gameplay across devices.
