@@ -9,9 +9,7 @@ async function handleFetchResults(req, res) {
       .status(400)
       .json({ success: false, message: "All fields are required" });
   }
-  console.log(req.query);
   const results = await Result.findOne({ email: email });
-  console.log(results);
   res.json({ success: true, data: results });
 }
 
