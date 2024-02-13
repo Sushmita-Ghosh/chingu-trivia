@@ -89,5 +89,4 @@ chingu-trivia/
 |
 |-- .gitignore
 |-- README.md
-|-- LICENSE
 ```
