@@ -48,9 +48,7 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
    cd backend   --> do this in terminal 2
    npm run start
    ```
-   
-
-
+## Screenshots 📷:
 
 ## 🌻 Deployment:
 * Used [Render](https://dashboard.render.com/) for web service/api deployment.
