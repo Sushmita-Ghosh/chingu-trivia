@@ -21,7 +21,7 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
 ## ✨ Getting Started:
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/yourusername/trivia-fun.git
+   git clone https://github.com/Sushmita-Ghosh/chingu-trivia.git
    ```
 2. Install Dependencies for both frontend & backend:
   ```bash
