@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { ToastContainer, toast } from "react-toastify";
+import { BACKEND_URL } from "../../constants/config";
 
 const SignUpForm = ({
   setLogin,
@@ -20,7 +21,7 @@ const SignUpForm = ({
     // since we are sendung json data, we need to set the content type to json
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/user",
+        `${BACKEND_URL}/user`,
         {
           username,
           password,

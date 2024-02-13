@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { BACKEND_URL } from "../../constants/config";
 
 const LoginForm = ({
   setLogin,
@@ -20,7 +21,7 @@ const LoginForm = ({
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/user/login",
+        `${BACKEND_URL}/user/login`,
         {
           email,
           password,

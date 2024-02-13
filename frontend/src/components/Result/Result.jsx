@@ -6,6 +6,7 @@ import axios from "axios";
 
 import "./Result.css";
 import { useState } from "react";
+import { BACKEND_URL } from "../../constants/config";
 const Result = ({ questions, result, restartQuiz }) => {
   const [getScores, setGetScores] = useState(null);
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const Result = ({ questions, result, restartQuiz }) => {
 
     try {
       await axios.post(
-        "http://localhost:5000/result",
+        `${BACKEND_URL}/result`,
         {
           email: JSON.parse(user).data.email,
           score: result.score,
@@ -90,7 +91,7 @@ const Result = ({ questions, result, restartQuiz }) => {
       const {
         data: { data },
       } = await axios.post(
-        "http://localhost:5000/result/show",
+        `${BACKEND_URL}/result/show`,
         {
           email: JSON.parse(user).data.email,
         },
