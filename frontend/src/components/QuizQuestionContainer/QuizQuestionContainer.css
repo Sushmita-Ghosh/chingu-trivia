@@ -1,19 +1,20 @@
 .quiz-question-container {
-  width: 600px;
   background: var(--light);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  width: 500px;
   margin: auto;
+  margin-bottom: 20%;
+  margin-top: 2%;
+  padding: 20px;
 }
 .question-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 400px; */
   width: 90%;
   border-radius: 10px;
   padding: 20px;
@@ -23,12 +24,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
 }
 
 .question {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 1.7rem;
   font-weight: 300;
@@ -55,7 +56,7 @@
   width: 40%;
   cursor: pointer;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: var(--dark);
   border-radius: 10px;
 }
@@ -72,6 +73,12 @@
 }
 
 .next-question-btn {
+  width: 20%;
+  margin: 20px;
+  padding: 10px;
+}
+
+.next-question-btn {
   &:disabled {
     cursor: not-allowed;
     background-color: var(--disabled);
@@ -79,11 +86,11 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .quiz-question-container {
-    width: 300px;
+    width: 500px;
     padding: 20px;
-    margin: auto;
+    margin: 5% 10%;
     height: 100%;
   }
   .question-container {
@@ -109,5 +116,20 @@
 
   .next-question-btn-container {
     justify-content: center;
+    width: 100%;
+  }
+
+  .next-question-btn {
+    width: 50%;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quiz-question-container {
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    height: 100%;
   }
 }

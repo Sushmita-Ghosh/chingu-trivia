@@ -4,13 +4,14 @@
   align-items: center;
   justify-content: center;
   width: 500px;
-  height: 80vh;
   margin: auto;
+  margin-bottom: 20%;
+  margin-top: 5%;
   padding: 20px;
 }
 
 .title {
-  font-size: 80px;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
   color: #5e4dcd;
@@ -19,7 +20,7 @@
 }
 
 .description {
-  font-size: 20px;
+  font-size: 0.9rem;
   font-weight: 400;
   text-align: center;
   color: #444444;
@@ -35,7 +36,7 @@
 }
 
 .dropdown .dropdown-btn {
-  padding: 15px;
+  padding: 10px;
   background: #fff;
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -44,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 0.9rem;
 }
 
 .dropdown-content {
@@ -60,7 +61,7 @@
 
 .dropdown-item {
   padding: 10px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -70,17 +71,18 @@
 }
 
 .btn {
+  padding: 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .quiz-container {
-    width: 300px;
+    width: 500px;
     padding: 20px;
-    margin: 10px;
-  }
-
-  .title {
-    font-size: 40px;
+    margin: 15% 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
 
   .description {
@@ -101,5 +103,13 @@
 
   .dropdown-item {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quiz-container {
+    width: 300px;
+    padding: 20px;
+    margin: 25% 10%;
   }
 }

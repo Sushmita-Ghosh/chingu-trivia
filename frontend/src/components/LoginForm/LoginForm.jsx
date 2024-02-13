@@ -99,7 +99,7 @@ const LoginForm = ({
 
       <ToastContainer
         style={{
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           fontWeight: "bold",
           width: "500px",
         }}

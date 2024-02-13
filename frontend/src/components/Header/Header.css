@@ -4,7 +4,7 @@
   align-items: center;
   height: 10%;
   background-color: var(--primary);
-  padding: 20px;
+  padding: 10px;
 }
 
 h1 {
@@ -20,6 +20,17 @@ h1 {
   .header {
     justify-content: center;
     padding: 0px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    justify-content: space-around;
+    padding: 0px;
+    width: 100%;
   }
   h1 {
     font-size: 1.2rem;

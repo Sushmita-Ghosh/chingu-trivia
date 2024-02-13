@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Authentication.css";
 import SignUpForm from "../SignUpForm/SignUpForm";
 import LoginForm from "../LoginForm/LoginForm";
-import AuthContext from "../../context/authentication";
 
 const Authentication = () => {
-  const { setLogin } = React.useContext(AuthContext);
   const [loginTab, setLoginTab] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +14,6 @@ const Authentication = () => {
       <div>
         {loginTab ? (
           <LoginForm
-            setLogin={setLogin}
             setLoginTab={setLoginTab}
             username={username}
             password={password}
@@ -27,7 +24,6 @@ const Authentication = () => {
           />
         ) : (
           <SignUpForm
-            setLogin={setLogin}
             setLoginTab={setLoginTab}
             username={username}
             password={password}

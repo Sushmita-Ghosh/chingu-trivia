@@ -121,8 +121,6 @@ const Result = ({ questions, result, restartQuiz }) => {
     }
   };
 
-  console.log(getScores);
-
   return (
     <>
       <div className="result">
@@ -166,7 +164,7 @@ const Result = ({ questions, result, restartQuiz }) => {
             </button>
             <ToastContainer
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1rem",
                 fontWeight: "bold",
                 width: "500px",
               }}
