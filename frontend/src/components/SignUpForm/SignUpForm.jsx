@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { ToastContainer, toast } from "react-toastify";
 import { BACKEND_URL } from "../../constants/config";
+import { useContext } from "react";
+import AuthenticationContext from "../../context/authentication";
 
 const SignUpForm = ({
-  setLogin,
   setLoginTab,
   username,
   password,
@@ -16,6 +17,8 @@ const SignUpForm = ({
   setEmail,
 }) => {
   const navigate = useNavigate();
+
+  const { setLogin } = useContext(AuthenticationContext);
 
   const handleSignUp = async () => {
     // since we are sendung json data, we need to set the content type to json
@@ -34,23 +37,18 @@ const SignUpForm = ({
         }
       );
 
-      console.log(data);
-
       //saving the token in local storage
       localStorage.setItem("token", data.token);
-
-      //saving the user in local storage
+      // saving the user in local storage
       localStorage.setItem(
         "user",
         JSON.stringify({
-          data: {
-            username: username,
-            email: email,
-          },
+          username: username,
+          email: email,
         })
       );
-
       setLogin(true);
+
       toast("🌻 Signed Up Successfully!", {
         position: "top-right",
         autoClose: 5000,
@@ -64,13 +62,22 @@ const SignUpForm = ({
         title: "Signed Up Successfully!",
         closeButton: false,
       });
+
       navigate("/");
     } catch (error) {
       alert(error);
     }
   };
+
   return (
     <div className="signup-form">
+      <ToastContainer
+        style={{
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          width: "500px",
+        }}
+      />
       <h2>Sign Up</h2>
       <div className="input-div">
         <input
@@ -114,20 +121,11 @@ const SignUpForm = ({
           Login
         </span>
       </p>
-
-      <ToastContainer
-        style={{
-          fontSize: "1.2rem",
-          fontWeight: "bold",
-          width: "500px",
-        }}
-      />
     </div>
   );
 };
 
 SignUpForm.propTypes = {
-  setLogin: PropTypes.func.isRequired,
   setLoginTab: PropTypes.func.isRequired,
   username: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,

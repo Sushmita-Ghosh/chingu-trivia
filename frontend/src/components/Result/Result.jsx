@@ -36,7 +36,7 @@ const Result = ({ questions, result, restartQuiz }) => {
       await axios.post(
         `${BACKEND_URL}/result`,
         {
-          email: JSON.parse(user).data.email,
+          email: JSON.parse(user).email,
           score: result.score,
           category: questions[0].topic,
         },
@@ -47,8 +47,6 @@ const Result = ({ questions, result, restartQuiz }) => {
           },
         }
       );
-
-      console.log(JSON.parse(user));
 
       toast("🚀 Scores Saved Successfully!", {
         position: "top-right",
@@ -85,15 +83,13 @@ const Result = ({ questions, result, restartQuiz }) => {
       navigate("/login");
     }
 
-    console.log(JSON.parse(user).data.email);
-
     try {
       const {
         data: { data },
       } = await axios.post(
         `${BACKEND_URL}/result/show`,
         {
-          email: JSON.parse(user).data.email,
+          email: JSON.parse(user).email,
         },
         {
           headers: {
@@ -177,10 +173,10 @@ const Result = ({ questions, result, restartQuiz }) => {
           {getScores && (
             <div className="score-card-wrapper">
               <h1 className="score-card-title">
-                Latest Scores - {JSON.parse(user).data.username}
+                Latest Scores - {JSON.parse(user).username}
               </h1>
               <div className="score-card">
-                <span>{JSON.parse(user).data.username}</span>
+                <span>{JSON.parse(user).username}</span>
                 <span>{getScores.score}</span>
                 <span>{getScores.category}</span>
               </div>
