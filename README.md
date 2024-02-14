@@ -4,6 +4,9 @@ Welcome to the Chingu Trivia 🚀, a web application built with the MERN (MongoD
 🎯 **Note:** You don't need to signup/login to take the quiz. However to fetch and save scores, signing up is necessary.
 
 ##  📷 Screenshots :
+https://github.com/Sushmita-Ghosh/chingu-trivia/assets/82622059/e0128dea-4369-4c9a-b366-a519776ea13f
+
+
 
 ## 🚀 Features
 *   **Authentication with JWT:** Securely authenticate users to save and fetch scores.
